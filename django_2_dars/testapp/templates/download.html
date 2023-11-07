@@ -1,0 +1,108 @@
+{% load static %}
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title> My Portfolio </title>
+    <link href="{%static 'css\style.css'%}"  rel="stylesheet" >
+</head>
+<body>
+    
+    <nav>
+        <div class="wrapper">
+        <img src="{% static 'images\my_logo.png' %}" alt="hammasi joyida">
+          <input type="radio" name="slider" id="menu-btn">
+          <input type="radio" name="slider" id="close-btn">
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Men haqimda</a></li>
+            <li>
+              <a href="#" class="desktop-item">Adobe Illustrator </a>
+              <input type="checkbox" id="showDrop">
+              <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+              <ul class="drop-menu">
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-item">Adobe Photoshop</a>
+              <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Mega Menu</label>
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
+                  </div>
+                  <div class="row">
+                    <header>Design Services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Graphics</a></li>
+                      <li><a href="#">Vectors</a></li>
+                      <li><a href="#">Business cards</a></li>
+                      <li><a href="#">Custom logo</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Email Services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Personal Email</a></li>
+                      <li><a href="#">Business Email</a></li>
+                      <li><a href="#">Mobile Email</a></li>
+                      <li><a href="#">Web Marketing</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Security services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Site Seal</a></li>
+                      <li><a href="#">VPS Hosting</a></li>
+                      <li><a href="#">Privacy Seal</a></li>
+                      <li><a href="#">Website design</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">After Effect</a></li>
+          </ul>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+      </nav>
+      
+    <img src="{% static 'images\my_logo.png' %}" alt="hammasi joyida">
+    <h1> PORTFOLIO </h1>
+    <h3> Men qilgan ishlar bilan tanishib chiqing marhamat</h3>
+      
+    <div id="home-icons" class=" my-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-cog"></i>
+                    <img src="{% static 'images\my_logo.png'%}"> 
+                    <h5> Lorem, ipsum dolor sit amet </h5>
+                    <p> hhfhhf fhhfhf ghgnvbjjjxcbxbc dghfhgv </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-cloud"> <img src="{% static 'images\my_logo.png'%}"> </i>
+                    <h5> Lorem, ipsum dolor sit amet </h5>
+                    <p> hhfhhf fhhfhf ghgnvbjjjxcbxbc dghfhgv </p>
+                </div>
+                <div class="col-md-4">
+                    <i> <img src="{% static 'images\my_logo.png'%}"> </i>
+                    <h5> Lorem, ipsum dolor sit amet </h5>
+                    <p> hhfhhf fhhfhf ghgnvbjjjxcbxbc dghfhgv </p>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+
+
+
+
+</body>
+</html>

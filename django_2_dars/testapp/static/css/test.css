@@ -1,0 +1,13 @@
+body{
+    background-color: blueviolet;
+}
+img{
+    width: 200px;
+    height: 150px;
+    align-items: center;
+}
+
+h2{
+    color: rgb(2, 88, 16);
+    font-family: Arial, sans-serif;
+}

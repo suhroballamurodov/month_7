@@ -1,0 +1,16 @@
+
+body,h1 {
+    font-family: "Raleway", sans-serif
+}
+body, html {
+    height: 100%
+{% static 'images\my_logo.png'%}}
+.bgimg {
+  background-image: url('my_logo.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+p{
+    large
+}
