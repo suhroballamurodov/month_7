@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/avto.css'%}">
+    <title> AVTO </title>
+</head>
+<body>
+
+    <h1> MY AUTOMOBILES </h1>
+    
+    <table>
+            <th> Model </th>
+            <th> Year </th>
+            <th> Price </th>
+            <th> Color </th>
+            <th> Images </th>
+        <tr>
+            <td> AMG 300 </td>
+            <td> 2022 </td>
+            <td> 450000 $</td>
+            <td> Black </td>
+            <td><img src="{%static 'images/bmw_x6.jfif'%}" alt=""></td>
+        </tr>
+        <tr>
+            <td> Mers </td>
+            <td> 2022 </td>
+            <td> 870000 $</td>
+            <td> White </td>
+            <td><img src="{%static 'images/mers.jpg'%}" alt=""></td>
+        </tr>
+        <tr>
+            <td> Mustang </td>
+            <td> 2022 </td>
+            <td> 750000 $ </td>
+            <td> Black </td>
+            <td><img src="{%static 'images/mustang.jpeg'%}" alt=""></td>
+        </tr>
+        <tr>
+            <td> Bugatti </td>
+            <td> 2023 </td>
+            <td> 4.500000 $ </td>
+            <td> Blue </td>
+            <td><img src="{%static 'images/bugatti.jpeg'%}" alt=""></td>
+        </tr>
+        <tr>
+            <td> Lada </td>
+            <td> 2023 </td>
+            <td> 980000 $</td>
+            <td> Black </td>
+            <td><img src="{%static 'images/lada.jpeg'%}" alt=""></td>
+        </tr>
+
+
+        <!-- {% for content in content %}  -- > > ishlamadi negadir bu ???
+        <tr>
+            <td>{{content.model}}</td>
+            <td>{{content.year}}</td>
+            <td>{{content.price}}</td>
+            <td>{{content.color}}</td>
+            <img src="{{content.images}}">
+            <td></td>
+        </tr>
+        {% endfor %} -->
+
+    </table>
+
+</body>
+</html>
