@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title> {{title}} </title>
+</head>
+<body>
+    <div class="w3-row-padding">
+        {% for item in news %}
+            <div class="w3-third w3-container w3-margin-bottom">
+                <img src="{% static 'images/default.jpg' %}" alt="Norway" style="width:50%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                  <p><b>{{item.title}}</b></p>
+                  <p>{{item.content}}</p>
+                  <p>yaratilgan vaqt: {{item.created}}</p>
+                  <p>{{item.updated}}</p>
+                </div>
+            </div>
+            <hr>
+            <!-- <div class="w3-third w3-container w3-margin-bottom">   #bu ishlamadi negadir rasmni bermayapti
+                <div class="w3-container w3-white">
+                  <h6><b>{{item.title}}</b></6>
+                  <p>{{item.content}}</p>
+                  <p>yaratilgan vaqt: {{item.created}}</p>
+                  <p>{{item.updated}}</p>
+                    <img src="{static item.photos}">
+                </div>
+              </div>
+            <hr> -->
+        {% endfor %}
+    </div>
+</body>
+</html>
