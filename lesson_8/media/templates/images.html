@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/uyga-vazifa.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Photos</title>
+    <style>
+      body{background-color: black;
+      }
+    </style>
+</head>
+<body>
+    <div class="w3-padding-64 w3-content" id="photos">
+        <h2 class="w3-text-light-grey">My Photos</h2>
+        <hr style="width:200px" class="w3-opacity">
+    
+        <!-- Grid for photos -->
+      {% for image in images %}
+        <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half">
+            <img src="/mediafiles/{{image.rasm}}" style=width:50%>
+          </div>
+      <div class="w3-half" style="margin: 20px -16px">
+        <img src="/mediafiles/{{image.rasm}}" style="width:70%">
+      </div>
+      {% endfor %}
+      
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i><img src="{% static 'images/logo_1.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_5.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_4.png'%}" style="width:7%"></i>
+    <i><img src="{% static 'images/logo_1.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_4.png'%}" style="width:7%"></i>
+    <i><img src="{% static 'images/logo_5.png'%}" style="width:10%"></i>
+    
+    <p class="w3-medium">Powered by <a href="{% url 'contact' %}" target="_blank" class="w3-hover-text-green">Sukhrob Allamurodov</a></p>
+  <!-- End footer -->
+  </footer>
+</body>
+</html>

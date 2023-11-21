@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/uyga-vazifa.css'%}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="{% static 'images/logo_1.png'%}" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-red">
+    <img src="{% static 'images/icon/kalendar.png'%}" alt="Icon" style="color: brown; width: 20%;">
+    <p>HOME</p>
+  </a>
+  <a href="{% url 'about' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <img src="{% static 'images/icon/location_1.png'%}" alt="Icon" style="width: 20%;">
+    <p>ABOUT</p>
+
+  </a>
+  <a href="{% url 'images' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+    <img src="{% static 'images/icon/location.png'%}" alt="Icon" style="width: 20%;">
+    <p>PHOTOS</p>
+  </a>
+  <a href="{% url 'contact' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-pink">
+    <img src="{% static 'images/icon/megaphone.png'%}" alt="Icon" style="width: 20%;">
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Sukhrob Allamurodov.</h1>
+    <p>Web Deweloper and Grafik,Motion Designer.</p>
+    <img src="{% static 'images/logo_5.png'%}" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
+      <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i><img src="{% static 'images/logo_1.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_5.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_4.png'%}" style="width:7%"></i>
+    <i><img src="{% static 'images/logo_1.png'%}" style="width:10%"></i>
+    <i><img src="{% static 'images/logo_4.png'%}" style="width:7%"></i>
+    <i><img src="{% static 'images/logo_5.png'%}" style="width:10%"></i>
+
+    <p class="w3-medium">Powered by <a href="{% url 'contact' %}" target="_blank" class="w3-hover-text-green">Sukhrob Allamurodov</a></p>
+  <!-- End footer -->
+  </footer>
+</div>
+
+</body>
+</html>
