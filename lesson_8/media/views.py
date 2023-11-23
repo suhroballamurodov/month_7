@@ -12,7 +12,8 @@ def detail(request, pk):
 
 def lesson_9(request):
     lessons = Lesson_9.objects.all()
-    return render(request, 'lesson_9.html',{'lessons': lessons})
+    posts = Post.objects.all()
+    return render(request, 'lesson_9.html',{'lessons': lessons, 'post': posts})
 
 def mediauser(request):
     mediausers = MediaUser.objects.all()

@@ -8,7 +8,7 @@ class LessonAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id','owner','text','image')
+    list_display = ('id','owner','text','image', 'photo')
     search_fields = ['owner', 'text']
     
 

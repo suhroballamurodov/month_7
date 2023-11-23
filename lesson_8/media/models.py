@@ -24,6 +24,7 @@ class MediaUser(models.Model):
 class Post(models.Model):
     owner = models.ForeignKey(MediaUser, null=True, on_delete=models.CASCADE,verbose_name= 'Yaratuvchi')
     image = models.ImageField(null=True, blank=True, verbose_name='Rasmi')
+    photo = models.ImageField(null=True, blank=True, verbose_name='Rasmi_1')
     text = models.TextField(verbose_name='Matn')
 
     def __str__(self) -> str:

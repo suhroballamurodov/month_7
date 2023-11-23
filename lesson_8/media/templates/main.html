@@ -54,9 +54,11 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
-         <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+        {%for post in posts%}
+         <h4 class="w3-center">{{post.owner}}</h4>
+         <p class="w3-center"><img src="/mediafiles/{{post.image}}" class="w3-circle" style="height:30px;width:30px" alt="Avatar"></p>
          <hr>
+        {%endfor%}
          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
          <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
          <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
@@ -71,7 +73,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         {% for post in posts %}
           <div id="Demo1" class="w3-hide w3-container">
             
-            <a href="{% url post.owner %}"></a>
+          
             <p>{{post.owner}}</p>
           </div>
         {% endfor %}
@@ -112,8 +114,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
           <i class="fa fa-remove"></i>
         </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
+        <p><strong>Salom!</strong></p>
+        <p>Hurmatli sayt kuzatuvchilari. Bu mening shaxsiy blogim</p>
       </div>
     
     <!-- End Left Column -->
@@ -125,7 +127,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Social Media template by w3.css</h6>
+              <h6 class="w3-opacity">Social Media template by Sukhrob Allamurodov</h6>
               <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
               <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
             </div>
@@ -143,30 +145,34 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <p>{{post.text}}</p>
           <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half">
-              <img src="/mediafiles/{{post.image}}" style="width:70%" alt="Northern Lights" class="w3-margin-bottom">
+              <table>
+                <th><img src="/mediafiles/{{post.photo}}" style="width:100px" alt="Northern Lights" class="w3-margin-bottom"></th>
+                <th> <img src="" alt=""></th>
+                <th><img src="/mediafiles/{{post.image}}" style="width:100px" alt="Northern Lights" class="w3-margin-bottom"></th>
+              </table>
             </div>
         </div>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-Izoh qoldiring"></i>  Izoh qoldiring</button> 
       </div>
     {%endfor%}
 
 
     </div>
     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-Izoh qoldiring"></i>  Izoh qoldiring</button> 
   </div>
 
 
 {% for post in posts %}
   <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-    <img src="/mediafiles/{{post.image}}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+    <i><img src="/mediafiles/{{post.image}}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:40px"></i>
     <span class="w3-right w3-opacity">16 min</span>
     <h4>{{post.owner}}</h4><br>
     <hr class="w3-clear">
     <p>{{post.text}}</p>
     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-Izoh qoldiring"></i>  Izoh qoldiring</button> 
   </div> 
 {% endfor %}
 
