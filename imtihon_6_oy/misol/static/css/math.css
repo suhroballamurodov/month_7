@@ -1,5 +1,9 @@
-
-th{
+img{
+    border-radius: 20px;
+    border-start-end-radius: 80px;
+    border-end-start-radius: 80px;
+}
+th,tr,td{
     text-align: center;
     size: 20px;
 }

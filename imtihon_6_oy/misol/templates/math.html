@@ -25,23 +25,40 @@
     align-items: center;
 }</style>
 
-{% for item in tests %}
-    <div>
-        <p> {{item.savol}}</p>
-        <p> {{item.a}} </p>
-        <p> {{item.b}} </p>
-        <p> {{item.c}} </p>
-        <img src="/mediafiles/{{item.rasm}}" style="width: 10%;" alt="Test rasmi">
-        <hr>
-    </div>
-{% endfor %}
+
+<body>
+    <table>
+            <th> Savol </th>
+            <th> A </th>
+            <th> B </th>
+            <th> C </th>
+    {% for post in tests%}
+        <tr>
+            <td> {{post.savol}} </td>
+            <td> {{post.a}} </td>
+            <td> {{post.b}} </td>
+            <td>{{post.c}}</td>
+            <td> 
+                <img style="width: 10%; height: auto;" src="/mediafiles/{{post.rasm}}">
+            </td>
+        </tr>
+    {% endfor %}
+    
+    </table>
+
 
 <!-- Marematika misollar uchun -->
 {% for math in maths %}
 <table>
-    <th>{{math.birinchi_son}}</th>
-    <th>{{math.ikkinchi_son}}</th>
-    <th>{{math.natija}}</th>
+    <th> Savol </th>
+    <th> A </th>
+    <th> B </th>
+    <th> Natija </th>
+        <tr>
+        <td>{{math.birinchi_son}}</td>
+        <td>{{math.ikkinchi_son}}</td>
+        <td>{{math.natija}}</td>
+        </tr>
 </table>
 {%endfor%}
 
