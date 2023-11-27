@@ -1,10 +1,16 @@
 img{
-    border-radius: 20px;
-    border-start-end-radius: 80px;
-    border-end-start-radius: 80px;
+    align-items: center;
+    border-radius: 5px;
+    border-start-end-radius: 50px;
+    border-end-start-radius: 50px;
+}
+table{
+    background-color: #00ffff;
 }
 th,tr,td{
     text-align: center;
+    text-align: center;
+    border-color: #000;
     size: 20px;
 }
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */

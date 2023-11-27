@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="% static 'css/math1.css'%}">
+    <link rel="stylesheet" href="% static 'css/math2.css'%}">
+    <link rel="stylesheet" href="{% static 'css/math.css'%}">
+    <title>Test</title>
+</head>
+<body>
+    {%for item in tests%}
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:500px">
+  <h3><b> TEST I </b></h3><br>
+  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"><img src="/mediafiles/{{item.rasm}}" alt="" style="width:50%;  "></i>
+  <p><b>{{item.savol}}</b></p>
+  <p>A. {{item.a}}</p>
+  <p>B. {{item.b}}</p>
+  <p>C .{{item.c}}</p>
+  </div>
+</div>
+{%endfor%}
+
+<p> Tuzuvchi <a href="{%url 'test'%}" target="_blank">  Sukhrob Allamurodov</a></p>
+<div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+  <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+  <a class="w3-text-white" href="{%url 'test'%}"><span class="w3-xlarge">
+  <i class="fa fa-chevron-circle-up"></i></span></a>
+</div>
+</body>
+</html>

@@ -29,4 +29,4 @@ class TestModel(models.Model):
 
     class Meta:
         verbose_name = 'Test'
-        verbose_name_plural = 'Tetslar'
+        verbose_name_plural = 'Testlar'
