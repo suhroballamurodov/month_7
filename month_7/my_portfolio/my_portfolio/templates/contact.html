@@ -1,0 +1,14 @@
+<!-- {% load crispy_forms_tags %} #ishlamadi -->
+
+{% block content %}
+    <h1>Kontakt</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-primary" type="submit" style="border-color:blue; border-width: 10px; font-size: 20px; border-radius: 15px;">Yuborish</button>
+    </form>
+{% endblock %}
+
+
+
+
