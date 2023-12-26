@@ -94,7 +94,7 @@ class PostDeleteView(DeleteView):
 
     # def updatepost(request, pk):
     #     post = get_object_or_404(PostModel, id=pk)
-    #     form = PostForm(initial={'title':post.title, 'short_desc':post.short_deck, 'body':post.body})
+        # form = PostForm(initial={'title':post.title, 'short_desc':post.short_deck, 'body':post.body})
     #     if request.method == 'POST':
     #         form = PostForm(request.POST, instance=post)
     #         if form.is_valid():
