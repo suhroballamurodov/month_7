@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from telegrambot.views import index
-# from .views import sendmail
+from telegrambot.views import index, sendmail
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('telegrambot.urls')),
-    # path('testmail/', sendmail),
+    path('testmail/', sendmail),
     path('bot/',index),
 ]

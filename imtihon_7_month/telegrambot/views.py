@@ -4,14 +4,26 @@ from django.http import HttpRequest, HttpResponse
 import telebot
 from .handlers import bot
 import logging
+from django.core.mail import send_mail
+from django.conf import settings
 
 
-
-def main(request):
-    return render(request, 'index.html',{})
 
 def home(request):
-    return HttpResponse("Suhrob Allamurodovning django va bot ishlayotgan application 1")
+    return HttpResponse("Suhrob Allamurodovning django va bot birgalikda ishlayotgan application")
+
+
+
+def sendmail(request):
+    send_mail(
+        subject='Imtihon uchun email yuborish', 
+        message='N17 guruh Suhrob Allamurodov tomonidan yozildi...', 
+        from_email='asunteam1824@mail.ru',
+        recipient_list=['mamajonovibrokhimjon@gmail.com','suhrobbekallamurodov18@gmail.com'],
+        fail_silently=False)
+    return HttpResponse('Email has been sent!!...')
+
+
 
 @csrf_exempt
 def index(request: HttpRequest):

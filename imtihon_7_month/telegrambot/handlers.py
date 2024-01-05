@@ -2,11 +2,12 @@ import telebot
 from telebot.types import Message
 from telebot import types
 import wikipedia, re
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
 
-BOT_TOKEN = '6773808236:AAGTJXS6X9F6ME8fmGW43IJgZLgnBE2c3Qs'
-
-
+BOT_TOKEN =os.environ.get("BOT_TOKEN")
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
